@@ -1,3 +1,4 @@
+/** Copyright Philipp Zedler. MIT License **/
 (function ($) {
     
     var InfiniteBox = function ($element, options) {
@@ -49,12 +50,13 @@
         fetch_items: function (href) {
             var infinite_box = this;
             var $next_button = this.get_next_button();
-            $next_button.fadeOut().remove();
+            $next_button.animate({opacity: 0});
             $.ajax({
                 url: href,
                 complete: function (data, textStatus, jqXHR) {
                     var $items = $(data.responseText).find(infinite_box.settings.itemSelector);
                     $items.hide();
+                    $next_button.remove();
                     infinite_box.$container.append($items);
                     $items.fadeIn();
                 },
