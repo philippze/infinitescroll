@@ -50,6 +50,7 @@
         fetch_items: function (href) {
             var infinite_box = this;
             var $next_button = this.get_next_button();
+            $next_button.addClass('loading');
             $next_button.animate({opacity: 0});
             $.ajax({
                 url: href,
@@ -84,7 +85,7 @@
             }
         },
         get_next_button: function () {
-            return $(this.settings.nextSelector);
+            return $(this.settings.nextSelector).not('.loading');
         },
         _nearbottom: function () {
             pixelsFromWindowBottomToBottom = 0 + $(document).height() - ($(window).scrollTop()) - $(window).height();
