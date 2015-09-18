@@ -54,7 +54,7 @@
             $.ajax({
                 url: href,
                 complete: function (data, textStatus, jqXHR) {
-                    var $items = $(data.responseText).find(infinite_box.settings.itemSelector);
+                    var $items = $(data.responseText).find(infinite_box.get_full_selector());
                     $items.hide();
                     $next_button.remove();
                     infinite_box.$container.append($items);
@@ -62,6 +62,9 @@
                 },
                 dataType: 'html',
             });
+        },
+        get_full_selector: function () {
+            return this.settings.itemSelector + ', ' + this.settings.nextSelector;
         },
         get_href: function ($element) {
             var href = $element.attr('href');
