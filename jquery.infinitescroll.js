@@ -81,7 +81,7 @@
             }
         },
         get_next_button: function () {
-            return this.$container.find(this.settings.nextSelector);
+            return $(this.settings.nextSelector);
         },
         _nearbottom: function () {
             pixelsFromWindowBottomToBottom = 0 + $(document).height() - ($(window).scrollTop()) - $(window).height();
