@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+	<title>Infinitescroll Demo</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<meta name="generator" content="Geany 0.21" />
+	<style>
+		.container {
+			margin: 0 auto;
+			max-width: 1280px;
+		}
+		.row {
+			margin: 0 -15px;
+		}
+		.col {
+			float: left;
+			width: 50%;
+		}
+		.well {
+			padding: 15px;
+		}
+		img {
+			width: 100%;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<h1>Infinitescroll Demo</h1>
+		<div class="row">
+			<div class="col">
+				<div class="well">
+					<img src="box-red.jpg" />
+				</div>
+			</div>
+			<div class="col">
+				<div class="well">
+					<img src="box-red.jpg" />
+				</div>
+			</div>
+			<div class="col">
+				<div class="well">
+					<img src="box-red.jpg" />
+				</div>
+			</div>
+			<div class="col">
+				<div class="well">
+					<img src="box-red.jpg" />
+				</div>
+			</div>
+			<div class="col">
+				<div class="well">
+					<img src="box-red.jpg" />
+				</div>
+			</div>
+			<div class="col">
+				<div class="well">
+					<img src="box-red.jpg" />
+				</div>
+			</div>
+			<div class="col">
+				<div class="well">
+					<img src="box-red.jpg" />
+				</div>
+			</div>
+			<div class="col">
+				<div class="well">
+					<img src="box-red.jpg" />
+				</div>
+				<a href="page2.html" class="next-page">Next Page</a>
+			</div>
+		</div>
+	</div>
+	
+	<script src="jquery-1.11.3.min.js"></script>
+	<script src="../jquery.infinitescroll.js"></script>
+	<script>
+		$('.row').infinitescroll({
+            itemSelector: '.col',
+            nextSelector: '.next-page'
+		});
+    </script>
+	
+</body>
+
+</html>
