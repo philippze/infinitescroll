@@ -1,5 +1,8 @@
 # jquery infinitescroll
 
+A demo page is currently [here](http://infinitescroll.zedler.it/demo/page1.html)
+
+
 
 ## Usage
 
