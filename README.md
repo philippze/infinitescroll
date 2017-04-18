@@ -1,3 +1,5 @@
+**News:** I've released this project to the public domain. You can clone it and develop it further under your own authorship.
+
 # jquery infinitescroll
 
 A demo page is currently [here](http://infinitescroll.zedler.it/demo/page1.html)
